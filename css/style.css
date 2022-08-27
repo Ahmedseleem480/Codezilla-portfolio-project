@@ -1,0 +1,360 @@
+/* Start variables */
+:root {
+    --main-color: #3a6cf4;
+    --section-padding: 90px 0;
+    --main-transition: 0.5s;
+}
+
+/* Start global rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 93%;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 85%;
+        padding: 10px;
+    }
+}
+
+.container {
+    margin: auto;
+    padding: 15px;
+}
+
+::selection {
+    background-color: #EEE8A9;
+}
+
+/* End global rules */
+/* Start conmponents */
+.main-heading {
+    text-align: center;
+    font-size: clamp(0.5rem, 2.5rem, 3rem);
+    color: var(--main-color);
+    margin-bottom: 40px;
+}
+
+/* Start header */
+header {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 200;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container nav {
+    flex: 1
+}
+
+header .container nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header .container>a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+header .container nav ul li a {
+    color: var(--main-color);
+    font-size: clamp(0.2rem, 1.2rem, 1.8rem);
+}
+
+header .container nav ul li a:hover {
+    color: #AD50C2;
+}
+
+/* End header */
+/* Start landing */
+main {
+    padding: 60px 0 0 0;
+    width: 100%;
+}
+
+main .landing {
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: calc(100vh - 60px);
+    color: white;
+    max-width: 100%;
+}
+
+main .landing .container {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+
+main .landing .container .text h2 {
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+main .landing .container .text span {
+    color: #4e9eff;
+    font-size: 3.5rem;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+main .landing .container .text h3 {
+    font-size: 2rem;
+    margin: 0 0 45px 0;
+    font-weight: 600;
+}
+
+main .landing .container .text>a.main-btn {
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: var(--main-transition);
+}
+
+main .landing .container .text>a.main-btn:hover {
+    transform: scale(1.5);
+}
+
+main .landing .container .text ul.social {
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+main .landing .container .text ul.social li a {
+    color: white;
+    font-size: 2rem;
+}
+
+/* End landing page */
+/* Start services section */
+.services {
+    padding: var(--section-padding);
+    width: 100%;
+    max-width: 100%;
+}
+
+.services .container>.serv-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 20px auto 0;
+}
+
+.services .container>.serv-container>div,
+.contact .container>div {
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: 0 0 21px 4px #00000021;
+    transition: var(--main-transition);
+}
+
+.services .container>.serv-container>div:hover,
+.contact .container>div:hover {
+    transform: scale(1.1);
+}
+
+.services .container>.serv-container>div i {
+    font-size: 8rem;
+    margin-bottom: 25px;
+    color: var(--main-color);
+}
+
+.services .container>.serv-container>div h2 {
+    color: #3a6cf4;
+    font-size: 1.3rem;
+}
+
+.services .container>.serv-container>div p {
+    line-height: 1.5;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+/* End services section */
+/* Start projects section */
+.projects {
+    padding: var(--section-padding);
+    background-color: #000016;
+}
+
+.projects .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 59%;
+}
+
+.projects .container>div {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid white;
+    padding: 0 0 20px 0;
+    transition: var(--main-transition);
+}
+
+.projects .container>div>img {
+    max-width: 100%;
+}
+
+.projects .container>div>p {
+    padding: 15px;
+    font-size: 0.8rem;
+}
+
+.projects .container>div>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.projects .container>div>div h2 {
+    font-size: 1.2rem;
+}
+
+.projects .container>div>div a {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+.projects .container>div:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 992px) {
+    .projects .container {
+        width: 97%;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* End projects section */
+/* Start contact section */
+.contact {
+    padding: var(--section-padding);
+}
+
+.contact .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact .container>div {
+    flex-basis: 35%;
+}
+
+@media screen and (max-width: 768px) {
+    .contact .container>div {
+        flex-basis: 90%;
+    }
+}
+
+.contact .container>div i {
+    font-size: 8rem;
+    margin-bottom: 25px;
+    color: var(--main-color);
+}
+
+.contact .container>div h2 {
+    color: #3a6cf4;
+    font-size: 1.3rem;
+}
+
+.contact .container>div p {
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #000016;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+footer ul.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer ul.social li a {
+    color: white;
+    font-size: 1.4rem;
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+footer a {
+    color: var(--main-color);
+}
